@@ -43,8 +43,8 @@
       border-radius: 20px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
       position: relative;
-      width: 330px;
-      height: 280px;
+      width: 340px;
+      height: 300px;
       z-index: 10;
     }
 
@@ -85,7 +85,7 @@
       color: #ff4d6d;
       opacity: 0;
       animation: glowFade 2s ease forwards;
-      text-shadow: 0 0 10px rgba(255,77,109,0.7);
+      text-shadow: 0 0 12px rgba(255,77,109,0.8);
     }
 
     @keyframes glowFade {
@@ -104,15 +104,15 @@
       margin-top: 20px;
       font-size: 18px;
       color: #ff4d6d;
-      line-height: 1.5;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
 
-  <!-- Romantic music -->
+  <!-- Romantic copyright-free music -->
   <audio id="loveSong">
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_7e8c4b2f44.mp3" type="audio/mpeg">
   </audio>
 
   <div class="container">
@@ -124,7 +124,7 @@
     <div class="message" id="message">
       <span id="name"></span>
       Loving you is my favorite story…  
-      and I’m so grateful it’s *you* ❤️✨
+      and I’m so grateful it’s <b>you</b> ❤️✨
     </div>
   </div>
 
@@ -163,6 +163,7 @@
     yesBtn.addEventListener("click", () => {
       nameSpan.textContent = "Stephy 💕";
       message.style.display = "block";
+      loveSong.volume = 0.7;
       loveSong.play();
     });
   </script>
